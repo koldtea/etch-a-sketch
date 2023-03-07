@@ -19,8 +19,8 @@ h1 {
   text-align: center;
 }
 
-.userReset {
-  width: 33%;
+.userOption {
+  width: 40%;
   margin: 0 auto;
   margin-top: 2em;
   text-align: center;
@@ -28,6 +28,11 @@ h1 {
 
 button {
   padding: 0.3em;
+}
+
+.blackColor {
+  background-color: black;
+  color: #fff;
 }
 
 .grid-container {
