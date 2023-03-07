@@ -1,15 +1,12 @@
+// References
 const gridContainer = document.querySelector('.grid-container')
 const resetBtn = document.getElementById('reset')
-const userValue = document.getElementById('grid-size')
+const removeBtn = document.getElementById('remove')
 
-// What Do?
-  // User inputs grid size through slider
-  // Submit slider value through button which then passes that value
-  // as a parameter into createGrid function
- 
+// Default grid size
+let size = 16;
 // Create Grid
-function createGrid() {
-  gridSize = document.getElementById('grid-size').value;
+function createGrid(gridSize) {
   for (let i = 0; i < gridSize; i++) {
     let column = document.createElement('div');
     column.className = 'column';
@@ -17,15 +14,32 @@ function createGrid() {
     for (let j = 0; j < gridSize; j++) {
       let row = document.createElement('div');
       row.className = 'row';
-      // Add Hover Effect
-      row.addEventListener('mouseover',
-        e => e.target.classList.add('hover-effect')
-      )
-      //
       column.appendChild(row);
     }
     gridContainer.appendChild(column);
   }
 };
-createGrid();
-// 
+createGrid(size);
+// Draw
+function draw() {
+  const allDivs = document.querySelectorAll('.row')
+  allDivs.forEach(div => {
+    div.addEventListener('mouseover', () => {
+      div.style.backgroundColor = 'black';
+    })
+  })
+};
+// Create new grid
+function removeGrid () {
+    while (gridContainer.firstChild) gridContainer.removeChild(gridContainer.firstChild);
+  }
+
+resetBtn.addEventListener('click', () => {
+  let userValue = Number(prompt('Enter size of new grid'))
+
+  while (userValue > 100){
+    userValue = Number(prompt('Only numbers less than 100 please.'))
+  }
+  while (gridContainer.firstChild) gridContainer.removeChild(gridContainer.firstChild);
+  createGrid(userValue);
+});

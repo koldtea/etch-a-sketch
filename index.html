@@ -10,21 +10,11 @@
 <body>
   <div class="wrapper">
     <h1>Etch-a-Sketch</h1>
-
-    <div class="grid-submit">
-      <label for="grid-size">Grid Size</label>
-      <input type="range" id="grid-size" min="2" max="64" value="16">
-       <!-- oninput="this.nextElementSibling.value = this.value">  -->
-      <!-- <output id="output">16</output> -->
+    <div class="userReset">
+      <button class="reset" id="reset">Create New Grid</button>
     </div>
-
-    <div class="userOption">
-      <button class="reset" id="reset">Reset Grid</button>
-    </div>
-
     <div class="grid-container">
     </div>
-
   </div>
 </body>
 <script src="index.js"></script>
