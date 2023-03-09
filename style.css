@@ -4,30 +4,36 @@
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-}
-
 body {
   background-color: #111827;
-  color: #fff;
+  color: white;
 }
 
 h1 {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.userOption,
+.utility {
+  width: 40%;
+  margin: 0 auto;
   margin-top: 1em;
   text-align: center;
 }
 
-.userOption {
-  width: 40%;
-  margin: 0 auto;
-  margin-top: 2em;
-  text-align: center;
+.utility {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 button {
+  min-width: 10em;
   padding: 0.3em;
+}
+
+div.utility > button {
+  cursor: pointer;
 }
 
 .blackColor {
@@ -39,8 +45,9 @@ button {
   width: 600px;
   height: 600px;
   margin: 0 auto;
-  margin-top: 2.5em;
-  border: 5px solid rgb(46, 82, 46);
+  margin-top: 1em;
+  border: 10px solid rgb(151, 45, 45);
+  border-radius: 1.5em;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -57,4 +64,16 @@ button {
   flex: 1;
   background-color: white;
   border: 0.2px solid rgb(61, 14, 14);
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
 }
