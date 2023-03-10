@@ -4,10 +4,12 @@ const resetBtn = document.getElementById('reset')
 const removeBtn = document.getElementById('remove')
 const blackEnable = document.getElementById('blackColor')
 const rgb = document.getElementById('rgb')
+const eraser = document.getElementById('eraser');
 
 // Listeners
 blackEnable.addEventListener('click', blackColor)
 rgb.addEventListener('click', rgbToggle)
+eraser.addEventListener('click', erase)
 
 // Default grid size
 let size = 16;
@@ -15,7 +17,6 @@ let size = 16;
 function createGrid(size) {
   for (let i = 0; i < size; i++) {
     let column = document.createElement('div');
-    // console.log(column)
     column.className = 'column';
 
     for (let j = 0; j < size; j++) {
@@ -44,8 +45,6 @@ function blackColor() {
 };
 
 // Eraser
-const eraser = document.getElementById('eraser');
-eraser.addEventListener('click', erase)
 function erase() {
   paintBlack = !paintBlack;
   if (!paintBlack) {
