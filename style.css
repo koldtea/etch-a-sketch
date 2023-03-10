@@ -38,7 +38,7 @@ div.utility > button {
 
 .blackColor {
   background-color: black;
-  color: #fff;
+  color: white;
 }
 
 .grid-container {
@@ -48,9 +48,7 @@ div.utility > button {
   margin-top: 1em;
   border: 10px solid rgb(151, 45, 45);
   border-radius: 1.5em;
-  overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
   background-color: white;
 }
 
